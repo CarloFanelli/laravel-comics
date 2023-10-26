@@ -43,4 +43,35 @@
 
 </div>
 
+
+<div class="icon_space ">
+    <div class="content d-flex">
+
+        <div class="col icon_text d-flex justify-content-center align-items-center">
+            <img src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}" alt="">
+            <p class="text-uppercase">digital comics</p>
+        </div>
+
+        <div class="col icon_text d-flex justify-content-center align-items-center">
+            <img src="{{Vite::asset('resources/img/buy-comics-merchandise.png')}}" alt="">
+            <p class="text-uppercase">dc merchandise</p>
+        </div>
+
+        <div class="col icon_text d-flex justify-content-center align-items-center">
+            <img src="{{Vite::asset('resources/img/buy-comics-subscriptions.png')}}" alt="">
+            <p class="text-uppercase">subscription</p>
+        </div>
+
+        <div class="col icon_text d-flex justify-content-center align-items-center">
+            <img src="{{Vite::asset('resources/img/buy-comics-shop-locator.png')}}" alt="">
+            <p class="text-uppercase">comic shop locator</p>
+        </div>
+
+        <div class="col icon_text d-flex justify-content-center align-items-center">
+            <img src="{{Vite::asset('resources/img/buy-dc-power-visa.svg')}}" alt="">
+            <p class="text-uppercase">dc power visa</p>
+        </div>
+
+    </div>
+</div>
 @endsection
