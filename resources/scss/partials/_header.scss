@@ -1,6 +1,6 @@
 @use './variable' as *;
 
-header {
+.head {
 
     max-width: 1280px;
     margin: 0 auto;
@@ -8,8 +8,11 @@ header {
 }
 
 .header_top {
+    background: $dc__evidence;
+
     .row {
-        background: $dc__evidence;
+        max-width: 1280px;
+        margin: 0 auto;
 
         p {
             color: $dc__light;
@@ -31,4 +34,20 @@ header {
 .active {
     color: $dc__evidence !important;
     border-bottom: 4px solid $dc__evidence;
+}
+
+.searchbar {
+    input {
+        border: 0;
+        border-bottom: 2px solid $dc__evidence;
+    }
+
+    input::-webkit-input-placeholder {
+        text-align: end;
+        color: $dc__dark;
+    }
+
+    input::-webkit-input-placeholder::after {
+        content: 'ciao';
+    }
 }

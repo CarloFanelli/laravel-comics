@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <nav class="p-0 navbar navbar-expand-lg bg-body-white my_nav">
+    <nav class="head p-0 navbar navbar-expand-lg bg-body-white my_nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="">
@@ -20,38 +20,16 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
+                    @foreach($menu_items as $menu_item)
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">characters</a>
+                        <a class="nav-link" href="#">{{$menu_item}}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">comics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">movies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">tv</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">games</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">collectibiles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">fans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">news</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">shop</a>
-                    </li>
+                    @endforeach
 
                 </ul>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="Search 🔍">
             </div>
         </div>
     </nav>
