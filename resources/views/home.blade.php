@@ -1,104 +1,46 @@
 @extends('layouts.app')
 
-@section('header-content')
-<header>
 
-    <div class="header_top container-fluid">
-        <div class="row justify-content-end">
-            <div class="col-2">
-                <p>dc powered visa</p>
-            </div>
-            <div class="col-2 me-5">
-                <p>additional dc sites</p>
-            </div>
-        </div>
-    </div>
-    <nav class="p-0 navbar navbar-expand-lg bg-body-white my_nav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">characters</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">comics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">movies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">tv</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">games</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">collectibiles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">fans</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">news</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">shop</a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-</header>
-
-@endsection
 
 @section('main-content')
-<div class="container">
-    <div class="row">
-        @foreach($comics as $comic )
-        <div class="col-4">
-            <div class="card">
-                <div class="card-header">
-                    <h6>
-                        {{$comic['title']}}
-                    </h6>
-                </div>
-                <div class="card-body">
-                    <img class="img-fluid" src="{{$comic['thumb']}}" alt="">
-                </div>
+<div class="jumbotron">
+
+</div>
+
+
+<div class="container-fluid products_space position-relative">
+    <div class="my_btn text-center btn_abs">
+        <a href="#">
+            <h6>Current series</h6>
+        </a>
+    </div>
+    <div class="content d-flex m-auto">
+
+        <div class="row">
+            @foreach($comics as $comic )
+            <div class="col-2 single_product">
+                <p>
+                    {{$comic['title']}}
+                </p>
+                <img class="img-fluid" src="{{$comic['thumb']}}" alt="">
             </div>
+            @endforeach
+
         </div>
-        @endforeach
 
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-2">
 
-        @endsection
-
-        @section('footer-content')
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <h1>test</h1>
-                    </div>
-                    <div class="col-4">
-                        <h1>test</h1>
-                    </div>
-                    <div class="col-4">
-                        <h1>test</h1>
-                    </div>
-                </div>
+            <div class="my_btn text-center">
+                <a href="#">
+                    <h6>load more</h6>
+                </a>
             </div>
-        </footer>
 
-        @endsection
+        </div>
+    </div>
+
+</div>
+
+@endsection

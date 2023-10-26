@@ -1,0 +1,65 @@
+@use './variable' as *;
+
+.jumbotron {
+    background-image: url('../../resources/img/jumbotron.jpg');
+    height: 400px;
+}
+
+.single_product {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+
+    p {
+        color: $dc__light;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    img {
+        max-width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1;
+    }
+
+}
+
+.products_space {
+
+    background: $dc__dark;
+    position: relative;
+    z-index: 1;
+
+    .content {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 2rem 0;
+        text-align: center;
+
+
+    }
+
+    .my_btn {
+
+        margin-bottom: 3rem;
+        background: $dc__evidence;
+        padding: 0.5rem 1rem;
+
+        h6 {
+            color: $dc__light;
+            text-transform: uppercase;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .btn_abs {
+        position: absolute;
+        top: -1rem;
+        left: 13rem;
+    }
+}

@@ -1,0 +1,65 @@
+@use './variable' as *;
+
+.footer_top {
+    margin: 0 auto;
+    z-index: 0;
+    background: url('../../resources/img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $dc__light;
+
+
+    .content {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+
+    }
+
+    .footer_nav {
+        & ul {
+            color: $dc__soft;
+            padding: 0;
+            text-align: start;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+    }
+
+
+}
+
+.footer_bottom {
+    z-index: 1;
+    position: relative;
+
+    background: $dc__dark;
+
+    .content {
+
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+
+        .my_btn {
+            border: 3px solid $dc__evidence;
+            padding: 1rem;
+
+            & a {
+                text-decoration: none;
+
+                & h5 {
+
+                    color: white;
+                    text-transform: uppercase;
+                    margin: 0;
+
+                }
+            }
+        }
+
+        .social {
+            color: $dc__evidence;
+        }
+    }
+}
