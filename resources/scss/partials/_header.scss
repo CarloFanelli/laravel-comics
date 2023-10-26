@@ -7,6 +7,19 @@ header {
     text-align: center;
 }
 
+.header_top {
+    .row {
+        background: $dc__evidence;
+
+        p {
+            color: $dc__light;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+
+}
+
 .nav-link {
 
     text-transform: uppercase;
