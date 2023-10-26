@@ -6,7 +6,7 @@
     <nav class="p-0 navbar navbar-expand-lg bg-body-white my_nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="../assets/img/dc-logo.png" alt="">
+                <img src="/../img/dc-logo.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,36 +56,39 @@
 @section('main-content')
 <div class="container">
     <div class="row">
-        <div class="col-6">
-            <h1>
-                ciao
-            </h1>
-        </div>
-        <div class="col-6">
-            <h1>
-                ciao
-            </h1>
-        </div>
-    </div>
-</div>
-
-@endsection
-
-@section('footer-content')
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <h1>test</h1>
-            </div>
-            <div class="col-4">
-                <h1>test</h1>
-            </div>
-            <div class="col-4">
-                <h1>test</h1>
+        @foreach($comics as $comic )
+        <div class="col-4">
+            <div class="card">
+                <div class="card-header">
+                    <h6>
+                        {{$comic['title']}}
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <img class="img-fluid" src="{{$comic['thumb']}}" alt="">
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+        @endforeach
 
-@endsection
+
+        @endsection
+
+        @section('footer-content')
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <h1>test</h1>
+                    </div>
+                    <div class="col-4">
+                        <h1>test</h1>
+                    </div>
+                    <div class="col-4">
+                        <h1>test</h1>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        @endsection
